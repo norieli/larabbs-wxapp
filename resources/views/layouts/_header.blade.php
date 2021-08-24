@@ -20,7 +20,7 @@
                 @else
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img src="https://gravatar.loli.top/avatar/cfedc000762cd0bd150ad1259119ac52?s=32">
+                        <img src="{{ $user->avatar }}" class="img-responsive img-circle" height="30px" width="30px">
                         {{ Auth::user()->name }}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">

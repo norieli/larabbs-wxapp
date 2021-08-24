@@ -4,7 +4,7 @@
 <div class="row">
     <div class="col-lg-3 col-md-3 hidden-sm hidden-xs user-info">
         <div class="card ">
-            <img class="card-img-top" src="https://gravatar.loli.top/avatar/cfedc000762cd0bd150ad1259119ac52?s=32">
+            <img class="card-img-top" src="{{ $user->avatar }}" alt="{{ $user->name }}">
             <div class="card-body">
                 <h5><strong>个人简介</strong></h5>
                 <p>{{ $user->introduction }}</p>
