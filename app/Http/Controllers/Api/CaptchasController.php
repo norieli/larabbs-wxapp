@@ -15,7 +15,7 @@ class CaptchasController extends Controller
 
         $captcha = $captchaBuilder->build();
         $expiredAt = now()->addMinutes(2);
-        \Cache::put($key, ['phone' => $phone, 'code' => $captcha], $expiredAt);
+        \Cache::put($key, ['phone' => $phone, 'code' => $captcha->getPhrase()], $expiredAt);
         $result = [
             'captcha_key' => $key,
             'expired_at' => $expiredAt->toDateTimeString(),

@@ -17,7 +17,7 @@ class VerificationCodesController extends Controller
         if (!$captchaData) {
             return $this->response->error('图片验证码已失效', 401);
         }
-        if (!hash_equals($captchaData['code'], $request->captchas_key)) {
+        if (!hash_equals(strtolower($captchaData['code']), strtolower($request->captcha_code))) {
             // 验证错误就清除缓存
             Cache::forget($request->captcha_key);
             return $this->response->errorUnauthorized('验证码错误');
