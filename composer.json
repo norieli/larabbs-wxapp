@@ -12,6 +12,7 @@
         "dingo/api": "2.0",
         "doctrine/dbal": "^2.13",
         "fideloper/proxy": "^4.0",
+        "gregwar/captcha": "^1.1",
         "hieu-le/active": "~3.5",
         "intervention/image": "^2.6",
         "laravel/framework": "5.7.*",
