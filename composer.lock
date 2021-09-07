@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6782e9a7ae60d5c090a580824c9a2c38",
+    "content-hash": "4dcd6bb1a03ba31d580256f339cb654b",
     "packages": [
         {
             "name": "cakephp/chronos",
@@ -2868,6 +2868,60 @@
                 "source": "https://github.com/thephpleague/oauth1-client/tree/v1.10.0"
             },
             "time": "2021-08-15T23:05:49+00:00"
+        },
+        {
+            "name": "liyu/dingo-serializer-switch",
+            "version": "0.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/liyu001989/dingo-serializer-switch.git",
+                "reference": "a150dc0deaaec41f694538e9b7a3ba538ea565ed"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/liyu001989/dingo-serializer-switch/zipball/a150dc0deaaec41f694538e9b7a3ba538ea565ed",
+                "reference": "a150dc0deaaec41f694538e9b7a3ba538ea565ed",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "dingo/api": "^2.0|^3.0",
+                "php": ">=7.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Liyu\\Dingo\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Liyu\\Dingo\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Yu Li",
+                    "email": "liyu001989@gmail.com"
+                }
+            ],
+            "description": "A middleware to switch dingo serializer",
+            "support": {
+                "issues": "https://github.com/liyu001989/dingo-serializer-switch/issues",
+                "source": "https://github.com/liyu001989/dingo-serializer-switch/tree/master"
+            },
+            "time": "2020-06-24T04:09:03+00:00"
         },
         {
             "name": "mews/captcha",
