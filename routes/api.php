@@ -50,6 +50,15 @@ $api->version('v1', [
         // 登录
         $api->post('authorizations', 'AuthorizationsController@store')
             ->name('api.authorizations.store');
+        // 小程序登录
+        $api->post('weapp/authorizations', 'AuthorizationsController@weappStore')
+            ->name('api.weapp.authorizations.store');
+        // 小程序注册
+        $api->post('weapp/users', 'UsersController@weappStore')
+            ->name('api.weapp.users.store');
+        // 用户详情
+        $api->get('users/{user}', 'UsersController@show')
+            ->name('api.users.show');
 
         // 刷新token
         $api->put('authorizations/current', 'AuthorizationsController@update')
@@ -91,6 +100,8 @@ $api->version('v1', [
             // 编辑登录用户信息
             $api->patch('user', 'UsersController@update')
                 ->name('api.user.update');
+            $api->put('user', 'UsersController@update')
+                ->name('api.user.update');
             // 图片资源
             $api->post('images', 'ImagesController@store')
                 ->name('api.images.store');
@@ -118,6 +129,8 @@ $api->version('v1', [
                 ->name('api.user.notifications.stats');
             // 标记消息通知为已读
             $api->patch('user/read/notifications', 'NotificationsController@read')
+                ->name('api.user.notifications.read');
+            $api->put('user/read/notifications', 'NotificationsController@read')
                 ->name('api.user.notifications.read');
             // 当前登录用户权限
             $api->get('user/permissions', 'PermissionsController@index')
